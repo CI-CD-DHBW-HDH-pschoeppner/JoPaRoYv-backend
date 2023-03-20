@@ -44,11 +44,11 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: DigitalOcean App Platform deployment
-        uses: appleboy/ssh-action@v0.1.8
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          passphrase: ${{ secrets.PASSWORD }}
+          password: ${{ secrets.PASSWORD }}
           script: |
             docker pull ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master
             docker run ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master
