@@ -27,6 +27,7 @@ class Websocket {
         println("User $id connected")
     }
 
+
     @OnClose
     fun onClose(session: Session?, @PathParam("id") id: String) {
         sessions.remove(id)
