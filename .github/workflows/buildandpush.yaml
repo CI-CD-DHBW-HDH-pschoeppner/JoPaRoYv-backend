@@ -48,8 +48,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: 22
+          passphrase: ${{ secrets.PASSWORD }}
           script: |
             docker pull ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master
             docker run ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master
