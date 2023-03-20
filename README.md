@@ -1,6 +1,8 @@
 # tic-tac-toe-backend
 
 by Patrick Maier, Jonas Pröll, Yvonne Rahnfeld, Ronja Eck
+PW: tictactoe
+Token: dop_v1_316bf45e4d15c9066a6fbf984ffee4e1327968f042e45a56d1093ed4712aa396
 
 
 
