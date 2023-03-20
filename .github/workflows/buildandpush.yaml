@@ -44,7 +44,12 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: DigitalOcean App Platform deployment
-        run: ssh root@157.230.110.40
-      - run: ${{ secrets.password }}
-      - run: docker pull ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master
-      - run: docker run ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            docker pull ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master
+            docker run ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master
