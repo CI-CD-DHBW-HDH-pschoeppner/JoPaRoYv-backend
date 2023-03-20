@@ -49,6 +49,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASS_PHRASE }}
           debug: true
           script: |
             docker pull ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master
