@@ -51,4 +51,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           debug: true
           script: |
-            docker run --rm -d --name tictactoe-backend ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master
+            docker stop tictactoe-backend
+            docker run --rm -d --name tictactoe-backend ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master -p 8080:8080
