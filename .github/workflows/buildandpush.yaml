@@ -51,4 +51,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           debug: true
           script: |
-            docker run ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master --name tictactoe-backend --rm -d
+            docker run --rm -d --name tictactoe-backend ghcr.io/ci-cd-dhbw-hdh-pschoeppner/joparoyv-backend:master
